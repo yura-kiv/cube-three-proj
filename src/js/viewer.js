@@ -61,11 +61,16 @@ export class Viewer {
     spotLight.castShadow = true;
     spotLight.shadow.mapSize.width = 2048;
     spotLight.shadow.mapSize.height = 2048;
+
     const ambientLight = new THREE.AmbientLight(0x404040);
+
     const pointLight1 = new THREE.PointLight(0xffb02e, 5, 20);
     const pointLight2 = new THREE.PointLight(0xffb03, 5, 20);
+    pointLight1.castShadow = true;
+    pointLight2.castShadow = true;
     pointLight1.position.set(-4, -2, -4);
     pointLight2.position.set(4, -2, 4);
+
     scene.add(ambientLight);
     scene.add(pointLight1);
     scene.add(pointLight2);

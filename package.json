@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npm run build && gh-pages -d dist",
     "build": "webpack --config ./bundler/webpack.prod.js",
     "start": "webpack serve --config ./bundler/webpack.dev.js"
   },
@@ -18,6 +19,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
+    "gh-pages": "^6.0.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.3",
     "ip": "^1.1.8",
